@@ -7,6 +7,18 @@ Vagrant::Config.run do |config|
     cfg.vm.network :hostonly, "192.168.33.10"
     cfg.vm.host_name = "melody"
   end
+
+  config.vm.define :dev001 do |cfg|
+    cfg.vm.box = "base"
+    cfg.vm.network :hostonly, "192.168.33.20"
+    cfg.vm.host_name = "dev001"
+  end
+
+  config.vm.define :app001 do |cfg|
+    cfg.vm.box = "base"
+    cfg.vm.network :hostonly, "192.168.33.30"
+    cfg.vm.host_name = "app001"
+  end
   
   # All Vagrant configuration is done here. The most common configuration
   # options are documented and commented below. For a complete reference,
